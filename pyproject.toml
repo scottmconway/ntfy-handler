@@ -1,0 +1,17 @@
+[project]
+name = "ntfy_handler"
+description = "An extremely simple logging handler for relaying log events to ntfy"
+version = "1.0.0"
+authors = [{name = "Scott Conway", email = "pypi@conway.scot"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only"
+]
+dependencies = [
+    "requests >=2.6"
+]
+[project.urls]
+Home = "https://github.com/scottmconway/ntfy-handler"

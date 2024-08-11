@@ -35,7 +35,7 @@ If advanced functionality is desired, custom headers can be passed to each reque
 
 The `Authorization` header may be set here. If it is, `access_token`, `username`, and `password` will not override the manually set value.
 
-The `X-Priority` header will always be overridden for each log record handled, so setting it here would be ineffectual.
+The `X-Title` and `X-Priority` headers will be overridden for each log record, so setting them here would be ineffectual.
 
 ### `log_level_priority_map`
 By default, log levels are mapped to their corresponding priorities in ntfy (defined [here](https://ntfy.sh/docs/publish/#message-priority)). However, a custom mapping from log level -> ntfy priority can be defined with the `log_level_priority_map` parameter when constructing a NtfyHandler.

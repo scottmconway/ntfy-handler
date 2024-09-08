@@ -75,8 +75,11 @@ class NtfyHandler(logging.Handler):
         self.ntfy_session = requests.Session()
         self.ntfy_session.headers = headers
 
+        self.log_level_priority_map = {}
         if log_level_priority_map:
-            self.log_level_priority_map = log_level_priority_map
+            # cast keys as int to allow loggingConfig to load from JSON
+            for log_level, ntfy_priority in log_level_priority_map.items():
+                self.log_level_priority_map[int(log_level)] = ntfy_priority
         else:
             self.log_level_priority_map = NtfyHandler.LOG_LEVEL_PRIORITY_MAP
 

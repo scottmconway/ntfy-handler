@@ -1,7 +1,7 @@
 [project]
 name = "ntfy_handler"
 description = "An extremely simple logging handler for relaying log events to ntfy"
-version = "1.0.3"
+version = "1.0.4"
 authors = [{name = "Scott Conway", email = "pypi@conway.scot"}]
 readme = "README.md"
 license = {file = "LICENSE"}

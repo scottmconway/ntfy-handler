@@ -93,7 +93,9 @@ class NtfyHandler(logging.Handler):
             self.ntfy_session.headers["X-Priority"] = str(priority)
             self.ntfy_session.headers["X-Title"] = f"{record.levelname}: {record.name}"
 
-            res = self.ntfy_session.post(self.topic_url, data=record.getMessage())
+            res = self.ntfy_session.post(
+                self.topic_url, data=record.getMessage().encode("utf-8")
+            )
             res.raise_for_status()
 
         except BaseException:
